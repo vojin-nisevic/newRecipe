@@ -45,5 +45,6 @@
     </div>
 </div>
 <div class="row">
-    <h1>{{recipeToShow.name}}</h1>
+    <h1 *ngIf="recipeToShow;else selectRecipe">{{recipeToShow.name}}</h1>
+    <ng-template #selectRecipe><h3 >Select recipe</h3></ng-template>
 </div>
